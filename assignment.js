@@ -1,3 +1,4 @@
+// https://github.com/siam22/assignment
 
 
 function kilometerToMeter(distance){
@@ -5,33 +6,31 @@ function kilometerToMeter(distance){
     var meter = kilomieter * 1000;
     if (kilomieter  < 0){
         return ('distance cannot be negative')
+        // shows only when the input is negative.
     }
     return meter;
-
+    // returns the value in meter.
 }
-var kew = kilometerToMeter(-5);
-console.log(kew);
 
 
-function budgetCalculator(watch, mobile, laptop){
-    var watchPrice = 50;
-    var mobilePrice = 100;
-    var laptopPrice = 500;
-    var totalWatchPrice = watchPrice * watch;
-    var totalMobilePrice = mobilePrice * mobile;
-    var totalLaptopPrice = laptopPrice * laptop;
-    var finalAmount = totalWatchPrice + totalMobilePrice + totalLaptopPrice;
-    if (watch, mobile, laptop < 0) {
+function budgetCalculator(watch, phone, laptop){
+    var finalAmount = 0;
+    // primary amount is 0.
+    var watchPrice = watch * 50;
+    var phonePrice = phone * 100;
+    var LaptopPrice = laptop * 500;
+    var finalAmount = watchPrice + phonePrice + LaptopPrice;
+    // sums the total cost of watch, phone, laptop.
+    if (watch, phone, laptop < 0) {
         return ("invalid amount");
     }
     return finalAmount;
 }
-var ulala = budgetCalculator(8, 9, 2);
-console.log(ulala);
 
 
 function hotelCost(days){
     var totalCost = 0;
+    // primary cost starts from 0.
     if (days <= 10){
         cost = days * 100;  
     } else if (days <= 20){
@@ -51,12 +50,22 @@ function hotelCost(days){
     }
     return totalCost;
 }
-var kala = hotelCost(-3);
-console.log(kala);
 
     
 
 
 function megaFriend(name){
-    
+    var longestName = name[0];
+    for (var i = 0; i < name.length; i++){
+        if (name[i].length > longestName.length){
+            longestName = name[i];
+        }
+        if (name.length <= 0){
+            return ('enter a valid name');
+        }
+    }
+     return longestName;
+    // returns the longest name from the array.
 }
+
+
